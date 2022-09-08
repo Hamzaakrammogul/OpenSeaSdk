@@ -2,7 +2,7 @@ import './App.css';
 import * as Web3 from 'web3'
 import { WyvernSchemaName } from "opensea-js/lib/types"
 
-const { OpenSeaSDK ,Network, OpenSeaAPI}= require("opensea-js")
+const { OpenSeaSDK ,Network}= require("opensea-js")
 
 const provider = new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/f9088ceaa1444035b0ab88ba1f1f0c9f')
 
@@ -64,14 +64,11 @@ const fetch_order = async ()=>{
 }
   return (
     <div className="App">
-      <button onClick={getTokens} >Get Asset</button>;
+      <button onClick={getTokens}>Get Asset</button>
       <button onClick={getbalance} >Get Balance</button>
       <button onClick={making_offers}>Make Offers</button>
       <button onClick={fetch_order}>Fetch Orders</button>
-
-
     </div>
   );
 }
-
 export default App;
